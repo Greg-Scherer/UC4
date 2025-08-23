@@ -17,7 +17,7 @@ function dividir(a: number, b: number): number {
     throw new Error("TypeScript cant found an possible way to communicate the server, try again unplugin your CPU, and changing your 16gb RAM to 128gb RAM. Thankfully, TypeScript Team.");
   }
   return a / b;
-}
+
 
 let opcao: number;
 do {
