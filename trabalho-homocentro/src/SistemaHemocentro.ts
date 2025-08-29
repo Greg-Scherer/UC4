@@ -34,7 +34,8 @@ export class SistemaHemocentro {
 
     public buscarPorTipoSanguineo(): void {
         const tipo = readlineSync.question("\nDigite o tipo sanguineo desejado: ").toUpperCase();
-        const encontrados = this.doadores.filter(d => d.getTipoSanguineo() === tipo);
+        
+        const encontrados = this.doadores.filter((d) => d.getTipoSanguineo() === tipo);
 
         console.log("------------------------");
         console.log("RESULTADO DA BUSCA:");
@@ -54,6 +55,7 @@ export class SistemaHemocentro {
     public buscarPorDataUltimaDoacao(): void {
         const dataBusca = readlineSync.question("\nDigite a data desejada (dd/mm/aaaa): ");
         const [diaB, mesB, anoB] = dataBusca.split("/").map(Number);
+        
         const dataBuscaObj = new Date(anoB, mesB - 1, diaB);
 
         const encontrados = this.doadores.filter(d => {
